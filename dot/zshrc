@@ -1,0 +1,29 @@
+export DOTFILES=~/.dotfiles
+
+# Flutter from fvm
+export PATH="$HOME/fvm/default/bin:$PATH"
+
+# Android
+export ANDROID_SDK_ROOT="$HOME/androidsdk"
+export PATH="$ANDROID_SDK_ROOT:$PATH"
+export PATH="$ANDROID_SDK_ROOT/cmdline-tools/tools/bin:$PATH"
+export PATH="$ANDROID_SDK_ROOT/cmdline-tools/tools/lib:$PATH"
+export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
+export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
+
+
+# Java (for Android SDK)
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+if [ -f "$HOME/.poeditor_token" ]; then
+    token=$(cat "$HOME/.poeditor_token")
+    export POEDITOR_TOKEN=token
+fi
+
+# Ruby from rbenv (for fastlane)
+if [ -d "$HOME/.rbenv" ]; then
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
+

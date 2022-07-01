@@ -1,0 +1,25 @@
+brew 'bat'
+brew 'bundletool'
+
+brew 'fd'
+brew 'fzf'
+
+brew 'git-lfs'
+brew 'gpg'
+brew 'grep'
+
+brew 'rbenv' # TODO: decide whether will be needed for fastlane
+brew 'rg'
+
+brew 'wget'
+
+cask '1password'
+cask '1password-cli'
+
+cask 'android-file-transfer'
+cask 'google-chrome'
+
+cask 'postman'
+
+tap 'leoafarias/fvm'
+brew 'fvm'

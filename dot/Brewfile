@@ -1,0 +1,16 @@
+brew 'coreutils'
+
+brew 'git'
+
+brew 'ios-deploy'
+
+brew 'mas'
+
+cask '1password'
+
+cask 'android-studio'
+cask 'iterm2'
+cask 'slack'
+cask 'visual-studio-code'
+
+mas 'Xcode', id: 497799835

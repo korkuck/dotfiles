@@ -1,0 +1,16 @@
+[user]
+	name = USER_NAME
+	email = USER_EMAIL
+[core]
+	autocrlf = input
+[push]
+	default = simple
+[pull]
+	ff = only
+[gpg]
+	program = gpg
+[credential]
+	credentialStore = gpg
+	helper = osxkeychain
+[init]
+	defaultBranch = master

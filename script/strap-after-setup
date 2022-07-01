@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+# Stuff to happen after brew is installed goes here!
+
+printf "strap-after-setup: such successfullness\n"

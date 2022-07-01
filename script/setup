@@ -1,0 +1,27 @@
+#!/bin/bash
+set -e
+
+# This script is designed to be run as part of the strap bootstrapping process.
+# Assume that git and brew are installed. Assume that dotfiles repo is in ~.
+
+GITCONFIG_PATH=~/.dotfiles/dot/gitconfig
+POEDITOR_TOKEN_PATH=~/.poeditor_token
+
+# TODO: generate ssh certificate for BitBucket
+
+printf "setup: enter your BitBucket username: "
+read USER_NAME
+
+printf "setup: enter your email: "
+read USER_EMAIL
+
+printf "setup: enter POEDITOR_TOKEN: "
+read POEDITOR_TOKEN
+
+sed -i '' "s/USER_NAME/$USER_NAME/" $GITCONFIG_PATH
+sed -i '' "s/USER_EMAIL/$USER_EMAIL/" $GITCONFIG_PATH
+
+echo $POEDITOR_TOKEN > ~/.poeditor_token
+
+printf "setup: your gitconfig has been updated\n"
+printf "username: $USER_NAME, email: $USER_EMAIL\n"
